@@ -5,6 +5,7 @@
 #include <string>
 #include <tchar.h>
 #include <vector>
+#include <math.h>
 
 #include <d3d11.h>
 #include <DirectXMath.h>

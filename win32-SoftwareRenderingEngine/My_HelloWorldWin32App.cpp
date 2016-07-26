@@ -27,11 +27,27 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(-1, 1, 1));
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(1, 1, 1));
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(-1, -1, 1));
-	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(-1, -1, -1));
+	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(1, -1, 1));
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(-1, 1, -1));
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(1, 1, -1));
-	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(1, -1, 1));
 	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(1, -1, -1));
+	mesh.Vertices.push_back(DirectX::SimpleMath::Vector3(-1, -1, -1));
+
+	mesh.Faces.push_back(Face(0, 1, 2));
+	mesh.Faces.push_back(Face(1, 2, 3));
+	mesh.Faces.push_back(Face(1, 3, 6));
+	mesh.Faces.push_back(Face(1, 5, 6));
+	mesh.Faces.push_back(Face(0, 1, 4));
+	mesh.Faces.push_back(Face(1, 4, 5));
+
+	mesh.Faces.push_back(Face(2, 3, 7));
+	mesh.Faces.push_back(Face(3, 6, 7));
+	mesh.Faces.push_back(Face(0, 2, 7));
+	mesh.Faces.push_back(Face(0, 4, 7));
+	mesh.Faces.push_back(Face(4, 5, 6));
+	mesh.Faces.push_back(Face(4, 6, 7));
+
+
 
 	std::vector<Mesh*> meshes;
 	meshes.push_back(&mesh);
